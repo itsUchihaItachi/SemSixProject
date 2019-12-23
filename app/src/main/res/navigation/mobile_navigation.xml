@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.versionfour.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_attendance"
+        android:name="com.example.versionfour.ui.attendance.attendanceFragment"
+        android:label="@string/menu_attendance"
+        tools:layout="@layout/fragment_attendance" />
+
+    <fragment
+        android:id="@+id/nav_forums"
+        android:name="com.example.versionfour.ui.forums.ForumsFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_forums" />
+
+    <fragment
+        android:id="@+id/nav_tt"
+        android:name="com.example.versionfour.ui.tt.TTFragment"
+        android:label="@string/menu_tt"
+        tools:layout="@layout/fragment_tt" />
+
+    <fragment
+        android:id="@+id/nav_maps"
+        android:name="com.example.versionfour.ui.maps.MapsFragment"
+        android:label="@string/menu_maps"
+        tools:layout="@layout/fragment_maps" />
+
+    <fragment
+        android:id="@+id/nav_links"
+        android:name="com.example.versionfour.ui.links.LinksFragment"
+        android:label="@string/menu_links"
+        tools:layout="@layout/fragment_links" />
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.example.versionfour.ui.contacts.contactsFragment"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_contacts" />
+
+
+</navigation>
