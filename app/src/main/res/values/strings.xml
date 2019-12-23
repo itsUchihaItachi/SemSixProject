@@ -18,4 +18,6 @@
     <string name="menu_forums">Forums</string>
     <string name="menu_links">Links</string>
     <string name="menu_news">News</string>
+    <string name="title_activity_maps">Map</string>
+
 </resources>
