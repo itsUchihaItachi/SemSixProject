@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/nav_links"
-        android:name="com.example.versionfour.ui.links.LinksFragment"
+        android:name="com.example.versionfour.ui.links.LinksViewModel"
         android:label="@string/menu_links"
         tools:layout="@layout/fragment_links" />
 
