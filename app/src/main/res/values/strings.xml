@@ -18,4 +18,14 @@
     <string name="menu_forums">Forums</string>
     <string name="menu_links">Links</string>
     <string name="menu_news">News</string>
+
+
+
+    <string name="counter">Time Left</string>
+    <string name="countleft">till WORLDCUP 2k19!</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="worldcup_2k19">WORLDCUP 2k19!!</string>
+    <string name="days">Days</string>
 </resources>
