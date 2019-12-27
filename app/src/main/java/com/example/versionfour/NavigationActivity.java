@@ -1,25 +1,20 @@
 package com.example.versionfour;
 
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
+import android.view.Menu;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.Menu;
+import com.google.android.material.snackbar.Snackbar;
 
 public class NavigationActivity extends AppCompatActivity {
 
@@ -44,10 +39,11 @@ public class NavigationActivity extends AppCompatActivity {
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setItemIconTintList(null);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
+         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_attendance, R.id.nav_contact, R.id.nav_forums,
                 R.id.nav_tt, R.id.nav_maps, R.id.nav_links)
                 .setDrawerLayout(drawer)
