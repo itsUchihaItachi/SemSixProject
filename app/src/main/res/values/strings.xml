@@ -20,6 +20,6 @@
     <string name="menu_news">News</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="erp_id">ERP ID</string>
-    <string name="password">Password</string>
+    <string name="password">PASSWORD</string>
     <string name="title_activity_lay">lay</string>
 </resources>
