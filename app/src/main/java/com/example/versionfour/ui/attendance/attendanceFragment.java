@@ -1,6 +1,5 @@
 package com.example.versionfour.ui.attendance;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -22,10 +21,6 @@ import static android.Manifest.permission.CAMERA;
 
 public class attendanceFragment extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
-    public static void start(Context context){
-        Intent i=new Intent(context, attendanceFragment.class);
-        context.startActivity(i);
-    }
 
     private static final int REQUEST_CAMERA = 1;
     private ZXingScannerView scannerView;
