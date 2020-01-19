@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -35,12 +36,12 @@
         app:layout_constraintVertical_bias="0.156" />
 
     <LinearLayout
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+
         android:id="@+id/linearlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="1dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/logotxt"
@@ -52,18 +53,22 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <EditText
                 android:id="@+id/erpEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="10dp"
+                android:focusable="auto"
                 android:fontFamily="@font/kadwa_bold"
+                android:hapticFeedbackEnabled="true"
                 android:hint="@string/erp_id"
                 android:inputType="text"
                 android:maxLength="11"
                 android:maxLines="1"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -93,9 +98,27 @@
             android:layout_margin="4dp"
             android:clickable="true"
             android:focusable="true"
+            android:hapticFeedbackEnabled="true"
             android:src="@drawable/ic_arrow_forward_black_24dp"
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
+
+<!--    <com.wang.avi.AVLoadingIndicatorView-->
+<!--        android:id="@+id/avi"-->
+<!--        style="@style/AVLoadingIndicatorView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="181dp"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:layout_marginEnd="182dp"-->
+<!--        android:layout_marginBottom="62dp"-->
+<!--        android:visibility="visible"-->
+<!--        app:indicatorColor="@color/center_text"-->
+<!--        app:indicatorName="BallPulseIndicator"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/frgtpass" />-->
 
     <TextView
         android:id="@+id/frgtpass"
