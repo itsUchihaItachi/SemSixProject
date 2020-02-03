@@ -23,13 +23,7 @@ public class TTFragment extends Fragment {
         TTViewModel =
                 ViewModelProviders.of(this).get(TTViewModel.class);
         View root = inflater.inflate(R.layout.fragment_tt, container, false);
-        final TextView textView = root.findViewById(R.id.text_tt);
-        TTViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 }

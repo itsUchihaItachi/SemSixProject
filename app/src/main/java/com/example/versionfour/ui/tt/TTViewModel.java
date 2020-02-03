@@ -10,7 +10,7 @@ public class TTViewModel extends ViewModel {
 
     public TTViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is tt fragment");
+        mText.setValue("TimeTable");
     }
 
     public LiveData<String> getText() {
