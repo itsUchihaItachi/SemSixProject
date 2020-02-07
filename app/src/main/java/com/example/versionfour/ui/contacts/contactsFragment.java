@@ -18,10 +18,8 @@ import com.example.versionfour.R;
 public class contactsFragment extends Fragment {
     private contactsViewModel contactsViewModel;
 
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        contactsViewModel =
-                ViewModelProviders.of(this).get(contactsViewModel.class);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        contactsViewModel = ViewModelProviders.of(this).get(contactsViewModel.class);
 
         View root = inflater.inflate(R.layout.fragment_contacts, container, false);
         final TextView textView = root.findViewById(R.id.text_contact);

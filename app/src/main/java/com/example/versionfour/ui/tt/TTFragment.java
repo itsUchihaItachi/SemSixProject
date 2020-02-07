@@ -20,8 +20,7 @@ public class TTFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        TTViewModel =
-                ViewModelProviders.of(this).get(TTViewModel.class);
+        TTViewModel = ViewModelProviders.of(this).get(TTViewModel.class);
         View root = inflater.inflate(R.layout.fragment_tt, container, false);
 
         return root;
