@@ -7,14 +7,20 @@
     android:paddingStart="25dp"
     android:paddingEnd="25dp"
     android:textAlignment="center">
-
-    <Spinner
+    <com.jaredrummler.materialspinner.MaterialSpinner
         android:id="@+id/spinner"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="365dp"
-        android:layout_height="25dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ms_arrow_tint="@color/spinnerArrow"
+        app:ms_background_color="@color/spinnerColor"
+        app:ms_text_color="@color/spinnerArrow"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"

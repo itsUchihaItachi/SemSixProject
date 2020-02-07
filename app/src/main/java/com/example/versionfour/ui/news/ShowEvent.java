@@ -16,12 +16,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.versionfour.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +37,7 @@ public class ShowEvent extends AppCompatActivity {
         context.startActivity(i);
     }
 
-    private Spinner spinner;
+    private MaterialSpinner spinner;
     private DatabaseReference databaseReference;
 
     @Override
@@ -70,35 +72,24 @@ public class ShowEvent extends AppCompatActivity {
                 Toast.makeText(ShowEvent.this, databaseError.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
                 Log.d("POS", String.valueOf(position));
-                String text = spinner.getSelectedItem().toString();
-                Log.d("VOS", text);
-
-                setupRecyclerView(text);
-//                Intent i = new Intent(getApplicationContext(), ShowEventsDb.class).putExtra("VOS", text);
-//                startActivity(i);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
+                Log.d("VOS", item);
+                setupRecyclerView(item);
             }
         });
     }
 
-
-    private void setupRecyclerView(String text) {
+    private void setupRecyclerView(String item) {
 //        String  a =  getIntent().getStringExtra("VOS");
-        Log.d("VAL", text);
+        Log.d("VAL", item);
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<Post> options = new FirebaseRecyclerOptions.Builder<Post>()
-                .setQuery(FirebaseDatabase.getInstance().getReference().child("Events").child(text), Post.class)
+                .setQuery(FirebaseDatabase.getInstance().getReference().child("Events").child(item), Post.class)
                 .build();
 
         postAdapter = new PostAdapter(options);
