@@ -1,84 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingTop="2.5dp">
+    android:layout_margin="1dp"
+    android:paddingBottom="7dp">
 
-    <TextView
-        android:id="@+id/eventname"
-        android:layout_width="wrap_content"
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:padding="2dp"
-        android:text="Event Name"
-        android:textSize="20sp" />
+        app:cardCornerRadius="7.5dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/cardBackground">
 
-    <TextView
-        android:id="@+id/eventplace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_toEndOf="@+id/eventname"
-        android:padding="2dp"
-        android:text="Event Place"
-        android:textSize="20sp" />
+<!--        Don't touch this -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
 
-    <TextView
-        android:id="@+id/startdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/eventplace"
-        android:layout_marginStart="25dp"
-        android:padding="2dp"
-        android:text="Start Date" />
+            <TextView
+                android:id="@+id/eventname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:padding="2dp"
+                android:text="Event Name"
+                android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/starttime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/eventname"
-        android:layout_marginEnd="5dp"
-        android:layout_toEndOf="@+id/startdate"
-        android:padding="2dp"
-        android:text="Start Time" />
+            <TextView
+                android:id="@+id/eventplace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@+id/eventname"
+                android:padding="2dp"
+                android:text="Event Place"
+                android:textSize="20sp" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="1.5dp"
-        android:layout_height="17dp"
-        android:layout_below="@+id/eventplace"
-        android:layout_marginTop="1.5dp"
-        android:layout_toEndOf="@+id/starttime"
-        android:background="@color/colorPrimaryDark" />
+            <TextView
+                android:id="@+id/startdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventplace"
+                android:layout_marginStart="20dp"
+                android:padding="2dp"
+                android:text="Start Date" />
 
-    <TextView
-        android:id="@+id/enddate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/eventplace"
-        android:layout_marginStart="5dp"
-        android:layout_toEndOf="@+id/starttime"
-        android:padding="2dp"
-        android:text="End Date" />
+            <TextView
+                android:id="@+id/starttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventname"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@+id/startdate"
+                android:padding="2dp"
+                android:text="Start Time" />
 
-    <TextView
-        android:id="@+id/endtime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/eventplace"
-        android:layout_marginStart="5dp"
-        android:layout_toEndOf="@id/enddate"
-        android:padding="2dp"
-        android:text="End Time" />
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1.5dp"
+                android:layout_height="17dp"
+                android:layout_below="@+id/eventplace"
+                android:layout_marginTop="1.5dp"
+                android:layout_toEndOf="@+id/starttime"
+                android:background="@color/colorPrimaryDark" />
 
-    <TextView
-        android:id="@+id/eventlink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/startdate"
-        android:layout_marginStart="25dp"
-        android:padding="2dp"
-        android:text="Event Link" />
+            <TextView
+                android:id="@+id/enddate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventplace"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/starttime"
+                android:padding="2dp"
+                android:text="End Date" />
+
+            <TextView
+                android:id="@+id/endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventplace"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/enddate"
+                android:padding="2dp"
+                android:text="End Time" />
+
+            <TextView
+                android:id="@+id/eventlink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/startdate"
+                android:layout_marginStart="50sp"
+                android:padding="2dp"
+                android:text="Event Link" />
+
+<!--            <Button-->
+<!--                android:id="@+id/addEventBtn"-->
+<!--                android:layout_width="181dp"-->
+<!--                android:layout_height="38dp"-->
+<!--                android:layout_below="@+id/startdate"-->
+<!--                android:layout_marginStart="25dp"-->
+<!--                android:layout_toEndOf="@id/eventlink"-->
+<!--                android:text="Add To Calender" />-->
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>
