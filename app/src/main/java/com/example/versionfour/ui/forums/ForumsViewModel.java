@@ -4,16 +4,23 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.security.PrivateKey;
+
 public class ForumsViewModel extends ViewModel {
+    private String head;
+    private String desc;
 
-    private MutableLiveData<String> mText;
-
-    public ForumsViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is forums fragment");
+    public ForumsViewModel(String head, String desc) {
+        this.head = head;
+        this.desc = desc;
     }
+     public String getHead(){
+         return head;
+        }
 
-    public LiveData<String> getText() {
-        return mText;
-    }
+        public String getDesc(){
+        return desc;
+        }
+
+
 }

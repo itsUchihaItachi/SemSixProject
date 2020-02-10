@@ -22,13 +22,7 @@ public class contactsFragment extends Fragment {
         contactsViewModel = ViewModelProviders.of(this).get(contactsViewModel.class);
 
         View root = inflater.inflate(R.layout.fragment_contacts, container, false);
-        final TextView textView = root.findViewById(R.id.text_contact);
-        contactsViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 

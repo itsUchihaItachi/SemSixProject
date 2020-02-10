@@ -11,13 +11,12 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_attendance">Attendance</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_forums">Forums</string>
+    <string name="menu_events">events</string>
     <string name="menu_tt">Time Table</string>
     <string name="menu_maps">Maps</string>
     <string name="menu_contact">Contact</string>
-    <string name="menu_forums">Forums</string>
     <string name="menu_links">Links</string>
-    <string name="menu_events">Events</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="erp_id">ERP ID</string>
     <string name="password">PASSWORD</string>

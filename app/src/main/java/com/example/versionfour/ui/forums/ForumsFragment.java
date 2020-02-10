@@ -11,25 +11,41 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.versionfour.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ForumsFragment extends Fragment {
 
-    private ForumsViewModel forumsViewModel;
+    private RecyclerView forumsRecycleView;
+    private RecyclerView.Adapter forumsRecycleViewAdapter;
+
+    private List<ForumsViewModel> viewModelList;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        forumsViewModel =
-                ViewModelProviders.of(this).get(ForumsViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_forums, container, false);
-        final TextView textView = root.findViewById(R.id.text_forums);
-        forumsViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+        forumsRecycleView = root.findViewById(R.id.forumsRecycleView);
+        forumsRecycleView.setHasFixedSize(true);
+
+        forumsRecycleView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        viewModelList = new ArrayList<>();
+
+        for(int i = 0; i < 10 ; i++){
+            ForumsViewModel forumsViewModel = new ForumsViewModel("Heading" + (i+1),"Some description here");
+            viewModelList.add(forumsViewModel);
+        }
+
+        forumsRecycleViewAdapter = new ForumsAdapter(viewModelList , getContext());
+        forumsRecycleView.setAdapter(forumsRecycleViewAdapter);
+
         return root;
     }
 }
