@@ -45,4 +45,11 @@
             android:icon="@drawable/attendance1"
             android:title="@string/menu_attendance" />
     </group>
+    <item android:title="TODO">
+        <menu>
+            <item
+                android:id="@+id/log_out"
+                android:title="Logout" />
+        </menu>
+    </item>
 </menu>
