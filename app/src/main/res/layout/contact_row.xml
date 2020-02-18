@@ -11,7 +11,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:src="@mipmap/ic_launcher"
-        android:id="@+id/contactImage"
+        android:id="@+id/contactIcon"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:textStyle="bold"
             android:layout_margin="5dp"
             android:textSize="20sp"
-            android:id="@+id/contactName"
+            android:id="@+id/contactMainText"
             />
 
         <TextView
@@ -37,7 +37,7 @@
             android:textStyle="bold"
             android:layout_margin="5dp"
             android:textSize="15sp"
-            android:id="@+id/contactNumber"
+            android:id="@+id/contactSubText"
             />
 
 

@@ -1,29 +1,97 @@
 package com.example.versionfour.ui.contacts;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.versionfour.R;
 
 public class contactsFragment extends Fragment {
-    private contactsViewModel contactsViewModel;
+
+    ListView contactlistView;
+    String mTitle[] = {"Dean","Hos","Hod","Office","Programme head"};
+    String mDescription[] = {"1234567890", "1472583690", "3692581470", "7894561230", "1478520369"};
+    int images[] = {R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1};
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        contactsViewModel = ViewModelProviders.of(this).get(contactsViewModel.class);
 
         View root = inflater.inflate(R.layout.fragment_contacts, container, false);
+
+        contactlistView = root.findViewById(R.id.contactListView);
+        MyAdapter contactAdapter = new MyAdapter(getContext(), mTitle, mDescription, images);
+        contactlistView.setAdapter(contactAdapter);
+
+        contactlistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0){
+                    Toast.makeText(getContext() ,"Dean Som", Toast.LENGTH_SHORT).show();
+                }
+
+                if(position == 1){
+                    Toast.makeText(getContext() ,"HoS Som", Toast.LENGTH_SHORT).show();
+                }
+
+                if(position == 2){
+                    Toast.makeText(getContext() ,"HoD Som", Toast.LENGTH_SHORT).show();
+                }
+
+                if(position == 3){
+                    Toast.makeText(getContext() ,"Office Som", Toast.LENGTH_SHORT).show();
+                }
+
+                if(position == 4){
+                    Toast.makeText(getContext() ,"program Som", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         return root;
     }
 
+    private class MyAdapter extends ArrayAdapter<String> {
+
+        Context context;
+        String rTitle[];
+        String description[];
+        int img[];
+
+        public MyAdapter(Context contactsFragment, String[] title, String[] desc, int[] imgs) {
+            super( contactsFragment,R.layout.contact_row, R.id.contactMainText,title);
+            this.context=contactsFragment;
+            this.rTitle =title;
+            this.description = desc;
+            this.img = imgs;
+        }
+
+
+        @NonNull
+        @Override
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            LayoutInflater contactlayoutInflater = (LayoutInflater)getContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
+            View contactRow = contactlayoutInflater.inflate(R.layout.contact_row, parent, false);
+            ImageView imageView = contactRow.findViewById(R.id.contactIcon);
+            TextView myTitle = contactRow.findViewById(R.id.contactMainText);
+            TextView myDesc = contactRow.findViewById(R.id.contactSubText);
+
+            imageView.setImageResource(img[position]);
+            myTitle.setText(rTitle[position]);
+            myDesc.setText(description[position]);
+
+            return contactRow;
+        }
+    }
 }
