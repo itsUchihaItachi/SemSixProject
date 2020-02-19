@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toTopOf="@id/timeTableDownloadBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/haha"
+        android:src="@drawable/timetable"
         android:padding="10dp"
         android:layout_margin="10dp"></ImageView>
 

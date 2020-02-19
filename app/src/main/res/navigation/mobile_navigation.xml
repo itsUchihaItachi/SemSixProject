@@ -31,9 +31,9 @@
 
     <fragment
         android:id="@+id/nav_maps"
-        android:name="com.example.versionfour.ui.maps.MapsFragment"
-        android:label="@string/menu_maps"
-        tools:layout="@layout/fragment_maps" />
+        android:name="com.example.versionfour.ui.questionPaper.MapsFragment"
+        android:label="@string/menu_questionPaper"
+        tools:layout="@layout/fragment_question_paper" />
 
     <fragment
         android:id="@+id/nav_links"

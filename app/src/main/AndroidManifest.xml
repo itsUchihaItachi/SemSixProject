@@ -22,7 +22,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
-        <activity android:name=".ui.maps.MapsFragments" />
+        <activity android:name=".ui.questionPaper.QuestionPaperFragments" />
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
