@@ -11,35 +11,29 @@
         android:id="@+id/appBarQP"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:gravity="center"
-        android:elevation="0dp">
+        android:elevation="0dp"
+        android:gravity="center">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:src="@drawable/questionpaper">
-        </ImageView>
+            android:src="@drawable/questionpaper"></ImageView>
 
     </com.google.android.material.appbar.AppBarLayout>
-
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/question_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:tabGravity="fill"
-        app:tabMode="fixed"
-        app:tabTextColor="@color/tabtextcolor"
+        android:background="@color/colorPrimary"
+        app:tabGravity="fill"
         app:tabIndicatorColor="@color/tabindicatorcolor"
-        android:background="@color/colorPrimary">
+        app:tabMode="fixed"
+        app:tabTextColor="@color/tabtextcolor"></com.google.android.material.tabs.TabLayout>
 
-        <androidx.viewpager.widget.ViewPager
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question_paper_viewpager">
-
-        </androidx.viewpager.widget.ViewPager>
-
-    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/question_paper_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.viewpager.widget.ViewPager>
 </LinearLayout>
