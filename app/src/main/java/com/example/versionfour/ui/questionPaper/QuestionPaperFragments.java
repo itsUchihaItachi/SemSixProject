@@ -22,7 +22,7 @@ public class QuestionPaperFragments extends  Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_forums, container, false);
+        View root = inflater.inflate(R.layout.fragment_question_paper, container, false);
         tabLayout =  root.findViewById(R.id.question_tabs);
         // check fragment_question_paper
         appBarLayout =root.findViewById(R.id.appBarQP);
