@@ -11,15 +11,15 @@ import androidx.fragment.app.Fragment;
 
 import com.example.versionfour.R;
 
-public class FragmentStore extends Fragment {
+public class FragmentQuestionSY extends Fragment {
     View view;
-    public FragmentStore() {
+    public FragmentQuestionSY() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_store, container, false);
+        view = inflater.inflate(R.layout.fragment_sy_qp, container, false);
         return view;
     }
 }

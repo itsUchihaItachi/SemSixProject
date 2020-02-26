@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarQP"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:elevation="0dp"
         android:gravity="center">
 
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:src="@drawable/questionpaper"></ImageView>
+            android:src="@drawable/questionpaper"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -30,10 +30,10 @@
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/tabindicatorcolor"
         app:tabMode="fixed"
-        app:tabTextColor="@color/tabtextcolor"></com.google.android.material.tabs.TabLayout>
+        app:tabTextColor="@color/tabtextcolor"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/question_paper_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></androidx.viewpager.widget.ViewPager>
+        android:layout_height="wrap_content"/>
 </LinearLayout>

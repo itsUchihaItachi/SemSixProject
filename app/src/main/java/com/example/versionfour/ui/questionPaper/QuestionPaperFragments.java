@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.versionfour.R;
@@ -22,16 +21,17 @@ public class QuestionPaperFragments extends  Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
         View root = inflater.inflate(R.layout.fragment_question_paper, container, false);
         tabLayout =  root.findViewById(R.id.question_tabs);
-        // check fragment_question_paper
+
         appBarLayout =root.findViewById(R.id.appBarQP);
         viewPager = root.findViewById(R.id.question_paper_viewpager);
 
         QuestionViewPagerAdapter adapter = new QuestionViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new FragmentQuiz(),"Quiz");
-        adapter.addFragment(new FragmentExplore(),"Explore");
-        adapter.addFragment(new FragmentStore(),"Store");
+        adapter.addFragment(new FragmentQuestionFY(),"Quiz");
+        adapter.addFragment(new FragmentQuestionSY(),"Explore");
+        adapter.addFragment(new FragmentQuestionTY(),"Store");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

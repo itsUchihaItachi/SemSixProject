@@ -11,15 +11,15 @@ import androidx.fragment.app.Fragment;
 
 import com.example.versionfour.R;
 
-public class FragmentQuiz extends Fragment {
+public class FragmentQuestionTY extends Fragment {
     View view;
-    public FragmentQuiz() {
+    public FragmentQuestionTY() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_quiz,container,false);
+        view = inflater.inflate(R.layout.fragment_ty_qp, container, false);
         return view;
     }
 }
