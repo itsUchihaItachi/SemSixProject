@@ -1,5 +1,6 @@
 package com.example.versionfour;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,31 +8,28 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import com.example.versionfour.databinding.LoginLayoutBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDB;
-    EditText username;
-    EditText password;
-    FloatingActionButton floatingAction;
-
+    LoginLayoutBinding layoutBinding;
     private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_layout);
+        layoutBinding = DataBindingUtil.setContentView(this, R.layout.login_layout);
         myDB = new DatabaseHelper(this);
-        username = findViewById(R.id.erpEditText);
-        password = findViewById(R.id.passwordEditText);
-        floatingAction = findViewById(R.id.floatingActionButton);
-        floatingAction.setOnClickListener(new View.OnClickListener() {
+
+        layoutBinding.floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String email = username.getText().toString();
-                String pass = password.getText().toString();
+                String email = layoutBinding.erpEditText.getText().toString();
+                String pass = layoutBinding.passwordEditText.getText().toString();
                 myDB.insert();
                 Boolean checkEmailPass = myDB.checkEmail(email, pass);
                 if (checkEmailPass) {
