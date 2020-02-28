@@ -45,8 +45,8 @@ public class ForumsFragment extends Fragment {
         ForumsAdapter adapterForums = new ForumsAdapter(getChildFragmentManager());
         adapterForums.addFragment(new FragmentCulture(),"Culture");
         adapterForums.addFragment(new FragmentEntrepreneur(),"Entrepreneur");
-        adapterForums.addFragment(new FragmentPhotography(),"Store");
-        adapterForums.addFragment(new FragmentMarketing(),"Store");
+        adapterForums.addFragment(new FragmentPhotography(),"Photography");
+        adapterForums.addFragment(new FragmentMarketing(),"Marketing");
 
         viewPager_forums.setAdapter(adapterForums);
         tabLayout_forums.setupWithViewPager(viewPager_forums);
