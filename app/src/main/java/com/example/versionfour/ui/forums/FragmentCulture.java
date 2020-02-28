@@ -31,9 +31,8 @@ public class FragmentCulture extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_forums_culture,container,false);
         cultureRecyclerView = view.findViewById(R.id.cultureRecycleView);
-        Integer [] culturePics = {R.drawable.attendance1,R.drawable.forum1,R.drawable.contact1,
-                R.drawable.timetable1,R.drawable.questionpaper,R.drawable.event1,R.drawable.links1,R.drawable.haha};
-        String [] cultureDesc ={"some Desc","some Desc","some Desc","some Desc","some Desc","some Desc","some Desc","some Desc"};
+        Integer [] culturePics = {R.drawable.attendance1,R.drawable.forum1,R.drawable.contact1,R.drawable.timetable1,R.drawable.maps1,R.drawable.event1,R.drawable.links1};
+        String [] cultureDesc ={"some Desc","some Desc","some Desc","some Desc","some Desc","some Desc","some Desc"};
 
         cultureModels = new ArrayList<>();
         for(int i = 0 ; i < culturePics.length ; i++){
