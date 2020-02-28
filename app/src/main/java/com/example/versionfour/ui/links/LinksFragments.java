@@ -77,7 +77,7 @@ public class LinksFragments extends Fragment {
             }
             LinksViewModel myCurrentList = availList.get(position);
 
-            TextView myName = (TextView) convertView.findViewById(R.id.name);
+            TextView myName = convertView.findViewById(R.id.name);
 
             myName.setText(myCurrentList.getNameOfLink());
 

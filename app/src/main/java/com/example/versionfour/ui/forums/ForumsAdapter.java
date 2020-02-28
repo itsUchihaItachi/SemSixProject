@@ -1,59 +1,42 @@
 package com.example.versionfour.ui.forums;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.versionfour.R;
-
+import java.util.ArrayList;
 import java.util.List;
 
-public class ForumsAdapter extends RecyclerView.Adapter<ForumsAdapter.ForumsViewHodler> {
+public class ForumsAdapter extends FragmentPagerAdapter {
 
-    private List<ForumsViewModel> forumsViewModelList;
-    private Context context;
+    private final List<Fragment> fragmentListForums =  new ArrayList<>();
+    private final List<String> fragmentListTitlesForums = new ArrayList<>();
 
-    public ForumsAdapter(List<ForumsViewModel> forumsViewModelList ,Context context){
-        this.forumsViewModelList = forumsViewModelList;
-        this.context = context;
+    public ForumsAdapter(@NonNull FragmentManager fm) {
+        super(fm);
     }
-
     @NonNull
     @Override
-    public ForumsViewHodler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_forum_item, parent, false);
-
-        return new ForumsViewHodler(view);
+    public Fragment getItem(int position) {
+        return fragmentListForums.get(position);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ForumsViewHodler holder, int position) {
-        ForumsViewModel forumsViewModel = forumsViewModelList.get(position);
-        holder.textViewHeading.setText(forumsViewModel.getHead());
-        holder.textViewDescription.setText(forumsViewModel.getDesc());
+    public int getCount() {
+        return fragmentListTitlesForums.size();
     }
 
+    @Nullable
     @Override
-    public int getItemCount() {
-        return forumsViewModelList.size();
+    public CharSequence getPageTitle(int position) {
+        return fragmentListTitlesForums.get(position);
     }
 
-    public class ForumsViewHodler extends RecyclerView.ViewHolder {
-
-        public TextView textViewHeading, textViewDescription;
-
-        public ForumsViewHodler(@NonNull View itemView) {
-            super(itemView);
-
-            textViewHeading = (TextView) itemView.findViewById(R.id.forumsHeadingTextView);
-            textViewDescription = (TextView) itemView.findViewById(R.id.forumsDescriptionTextView);
-        }
+    public void addFragment(Fragment fragment, String title){
+        fragmentListForums.add(fragment);
+        fragmentListTitlesForums.add(title);
     }
 }

@@ -22,9 +22,9 @@ import com.example.versionfour.R;
 public class contactsFragment extends Fragment {
 
     ListView contactlistView;
-    String mTitle[] = {"Dean","Hos","Hod","Office","Programme head"};
-    String mDescription[] = {"1234567890", "1472583690", "3692581470", "7894561230", "1478520369"};
-    int images[] = {R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1};
+    String[] mTitle = {"Dean","Hos","Hod","Office","Programme head"};
+    String[] mDescription = {"1234567890", "1472583690", "3692581470", "7894561230", "1478520369"};
+    int[] images = {R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1};
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -65,9 +65,9 @@ public class contactsFragment extends Fragment {
     private class MyAdapter extends ArrayAdapter<String> {
 
         Context context;
-        String rTitle[];
-        String description[];
-        int img[];
+        String[] rTitle;
+        String[] description;
+        int[] img;
 
         public MyAdapter(Context contactsFragment, String[] title, String[] desc, int[] imgs) {
             super( contactsFragment,R.layout.contact_row, R.id.contactMainText,title);
@@ -81,7 +81,7 @@ public class contactsFragment extends Fragment {
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-            LayoutInflater contactlayoutInflater = (LayoutInflater)getContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater contactlayoutInflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View contactRow = contactlayoutInflater.inflate(R.layout.contact_row, parent, false);
             ImageView imageView = contactRow.findViewById(R.id.contactIcon);
             TextView myTitle = contactRow.findViewById(R.id.contactMainText);

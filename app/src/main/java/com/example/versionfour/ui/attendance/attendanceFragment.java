@@ -49,7 +49,7 @@ public class attendanceFragment extends AppCompatActivity implements ZXingScanne
 
     }
 
-    public void onRequestPermissionsResult(int requestCode, String permission[], int grantResults[]) {
+    public void onRequestPermissionsResult(int requestCode, String[] permission, int[] grantResults) {
         switch (requestCode) {
             case REQUEST_CAMERA:
                 if (grantResults.length > 0) {
