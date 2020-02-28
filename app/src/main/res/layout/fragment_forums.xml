@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/forums"
     android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -10,7 +11,7 @@
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarForums"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="70dp"
             android:elevation="0dp"
             android:gravity="center">
 
@@ -29,7 +30,7 @@
             android:background="@color/colorPrimary"
             app:tabGravity="fill"
             app:tabIndicatorColor="@color/tabindicatorcolor"
-            app:tabMode="fixed"
+            app:tabMode="scrollable"
             app:tabTextColor="@color/tabtextcolor"/>
 
         <androidx.viewpager.widget.ViewPager
