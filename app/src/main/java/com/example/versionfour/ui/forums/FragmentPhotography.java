@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.versionfour.R;
 
-class FragmentPhotography extends Fragment {
+public class FragmentPhotography extends Fragment {
 
     View view;
     public FragmentPhotography() {

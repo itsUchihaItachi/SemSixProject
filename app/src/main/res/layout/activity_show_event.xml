@@ -22,7 +22,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:ms_arrow_tint="@color/spinnerArrow"
         app:ms_background_color="@color/spinnerColor"
-        app:ms_text_color="@color/spinnerArrow" />
+        app:ms_text_color="@color/spinnerArrow"
+        android:text="Select the option"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"

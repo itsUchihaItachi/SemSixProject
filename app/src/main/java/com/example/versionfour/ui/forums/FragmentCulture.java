@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.versionfour.R;
 
-class FragmentCulture extends Fragment {
+ public class FragmentCulture extends Fragment {
 
     View view;
     public FragmentCulture() {

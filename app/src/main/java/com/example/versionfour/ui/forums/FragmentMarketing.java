@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.versionfour.R;
 
-class FragmentMarketing extends Fragment {
+public class FragmentMarketing extends Fragment {
     View view;
     public FragmentMarketing() {
     }
