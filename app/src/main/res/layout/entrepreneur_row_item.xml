@@ -15,14 +15,14 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cultureRowImgView"
+            android:id="@+id/entrepreneurRowImgView"
             android:padding="2dp"
             android:layout_margin="2dp"
             android:src="@drawable/haha"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cultureRowText"
+            android:id="@+id/entrepreneurRowText"
             android:text="Culture"
             android:textSize="20sp"
             android:textStyle="bold"/>

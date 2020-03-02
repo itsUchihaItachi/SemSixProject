@@ -15,15 +15,15 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cultureRowImgView"
+            android:id="@+id/marketingRowImgView"
             android:padding="2dp"
             android:layout_margin="2dp"
             android:src="@drawable/haha"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cultureRowText"
-            android:text="Culture"
+            android:id="@+id/marketingRowText"
+            android:text="Marketing"
             android:textSize="20sp"
             android:textStyle="bold"/>
     </LinearLayout>

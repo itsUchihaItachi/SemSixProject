@@ -7,11 +7,16 @@
     android:gravity="center">
 
     <TextView
-        android:id="@+id/Photography_textview"
+        android:id="@+id/photography_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Photography fragment"
+        android:text="About us for photography"
         android:textSize="20sp"
         android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/photographyRecycleView"/>
 
 </LinearLayout>

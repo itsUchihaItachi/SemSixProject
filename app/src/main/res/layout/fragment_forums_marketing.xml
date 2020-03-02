@@ -7,11 +7,16 @@
     android:gravity="center">
 
     <TextView
-        android:id="@+id/Marketing_textview"
+        android:id="@+id/marketing_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Marketing fragment"
+        android:text="About us for marketing"
         android:textSize="20sp"
         android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/marketingRecycleView"/>
 
 </LinearLayout>
