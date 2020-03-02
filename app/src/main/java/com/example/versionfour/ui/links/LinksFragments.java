@@ -38,7 +38,7 @@ public class LinksFragments extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_links, container, false);
 
-        //TODO: Do stuf  with your UI (rootView)
+        //TODO: Do stuff  with your UI (rootView)
         availList.add(new LinksViewModel("Under-Graduate Programmes", "https://mitwpu.edu.in/ug-programmes/"));
         availList.add(new LinksViewModel("Post-Graduate Programmes", "https://mitwpu.edu.in/pg-programmes/"));
 
