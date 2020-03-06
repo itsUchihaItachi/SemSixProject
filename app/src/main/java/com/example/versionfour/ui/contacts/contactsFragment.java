@@ -2,6 +2,8 @@ package com.example.versionfour.ui.contacts;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,9 +24,9 @@ import com.example.versionfour.R;
 public class contactsFragment extends Fragment {
 
     ListView contactlistView;
-    String[] mTitle = {"Dean","Hos","Hod","Office","Programme head"};
-    String[] mDescription = {"1234567890", "1472583690", "3692581470", "7894561230", "1478520369"};
-    int[] images = {R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1};
+    String[] mTitle = {"Dean","Hos","Hod","Office","Programme head","Lab head","Exam Co-ordinator"};
+    String[] mDescription = {"1234567890", "1472583690", "3692581470", "7894561230", "1478520369","9812348756","9812348756"};
+    int[] images = {R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1};
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -37,25 +39,50 @@ public class contactsFragment extends Fragment {
         contactlistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0){
+
+                Uri u= Uri.parse("tel:"+mDescription[position]);
+                Intent i=new Intent(Intent.ACTION_DIAL,u);
+                startActivity(i);
+                /*if(position == 0){
                     Toast.makeText(getContext() ,"Dean Som", Toast.LENGTH_SHORT).show();
+                    Uri u= Uri.parse("tel:"+mDescription[position]);
+                    Intent i=new Intent(Intent.ACTION_DIAL,u);
+                    startActivity(i);
                 }
 
                 if(position == 1){
                     Toast.makeText(getContext() ,"HoS Som", Toast.LENGTH_SHORT).show();
+                    Uri u= Uri.parse("tel:"+mDescription[position]);
+                    Intent i=new Intent(Intent.ACTION_DIAL,u);
+                    startActivity(i);
                 }
 
                 if(position == 2){
                     Toast.makeText(getContext() ,"HoD Som", Toast.LENGTH_SHORT).show();
+                    Uri u= Uri.parse("tel:"+mDescription[position]);
+                    Intent i=new Intent(Intent.ACTION_DIAL,u);
+                    startActivity(i);
                 }
 
                 if(position == 3){
                     Toast.makeText(getContext() ,"Office Som", Toast.LENGTH_SHORT).show();
+                    Uri u= Uri.parse("tel:"+mDescription[position]);
+                    Intent i=new Intent(Intent.ACTION_DIAL,u);
+                    startActivity(i);
                 }
 
                 if(position == 4){
                     Toast.makeText(getContext() ,"program Som", Toast.LENGTH_SHORT).show();
+                    Uri u= Uri.parse("tel:"+mDescription[position]);
+                    Intent i=new Intent(Intent.ACTION_DIAL,u);
+                    startActivity(i);
                 }
+                if(position == 5){
+                    Toast.makeText(getContext() ,"Lab head", Toast.LENGTH_SHORT).show();
+                }
+                if(position == 6){
+                    Toast.makeText(getContext() ,"Exam co-ordinator", Toast.LENGTH_SHORT).show();
+                }*/
             }
         });
 

@@ -41,7 +41,7 @@ public class FragmentCulture extends Fragment {
         }
 
         LinearLayoutManager cultureLinearLayoutManager = new LinearLayoutManager(
-                getContext(),LinearLayoutManager.HORIZONTAL, false);
+                getContext(),LinearLayoutManager.VERTICAL, false);
 
         cultureRecyclerView.setLayoutManager(cultureLinearLayoutManager);
         cultureRecyclerView.setItemAnimator(new DefaultItemAnimator());
