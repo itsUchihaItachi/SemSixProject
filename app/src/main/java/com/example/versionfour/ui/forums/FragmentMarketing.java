@@ -42,7 +42,7 @@ public class FragmentMarketing extends Fragment {
         }
 
         LinearLayoutManager marketingLinearLayoutManager = new LinearLayoutManager(
-                getContext(),LinearLayoutManager.HORIZONTAL, false);
+                getContext(),LinearLayoutManager.VERTICAL, false);
 
         marketingRecyclerView.setLayoutManager(marketingLinearLayoutManager);
         marketingRecyclerView.setItemAnimator(new DefaultItemAnimator());

@@ -42,7 +42,7 @@ public  class FragmentEntrepreneur extends Fragment {
         }
 
         LinearLayoutManager entrepreneurLinearLayoutManager = new LinearLayoutManager(
-                getContext(),LinearLayoutManager.HORIZONTAL, false);
+                getContext(),LinearLayoutManager.VERTICAL, false);
 
         entrepreneurRecyclerView.setLayoutManager(entrepreneurLinearLayoutManager);
         entrepreneurRecyclerView.setItemAnimator(new DefaultItemAnimator());

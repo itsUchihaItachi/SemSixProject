@@ -24,9 +24,12 @@ import com.example.versionfour.R;
 public class contactsFragment extends Fragment {
 
     ListView contactlistView;
-    String[] mTitle = {"Dean","Hos","Hod","Office","Programme head","Lab head","Exam Co-ordinator"};
-    String[] mDescription = {"1234567890", "1472583690", "3692581470", "7894561230", "1478520369","9812348756","9812348756"};
-    int[] images = {R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1};
+    String[] mTitle =
+            {"Dean","Hos","Hod","Office","Programme head","Lab head","Exam Co-ordinator"};
+    String[] mDescription =
+            {"1234567890", "1472583690", "3692581470", "7894561230", "1478520369","9812348756","9812348756"};
+    int[] images =
+            {R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1,R.drawable.contact1};
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 

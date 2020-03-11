@@ -42,7 +42,7 @@ public class FragmentPhotography extends Fragment {
         }
 
         LinearLayoutManager photographyLinearLayoutManager = new LinearLayoutManager(
-                getContext(),LinearLayoutManager.HORIZONTAL, false);
+                getContext(),LinearLayoutManager.VERTICAL, false);
 
         photographyRecyclerView.setLayoutManager(photographyLinearLayoutManager);
         photographyRecyclerView.setItemAnimator(new DefaultItemAnimator());
