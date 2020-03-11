@@ -9,11 +9,9 @@ public class CultureModel {
         this.cultureDesc = cultureDesc;
     }
 
-    //langlogo fun
     public Integer getCulturePics(){
         return culturePics;
     }
-    //langName fun
     public String getCultureDesc(){
         return cultureDesc;
     }
