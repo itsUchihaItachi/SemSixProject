@@ -29,9 +29,9 @@ public class QuestionPaperFragments extends  Fragment {
         viewPager = root.findViewById(R.id.question_paper_viewpager);
 
         QuestionViewPagerAdapter adapter = new QuestionViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new FragmentQuestionFY(),"Quiz");
-        adapter.addFragment(new FragmentQuestionSY(),"Explore");
-        adapter.addFragment(new FragmentQuestionTY(),"Store");
+        adapter.addFragment(new FragmentQuestionFY(),"First year");
+        adapter.addFragment(new FragmentQuestionSY(),"Second year");
+        adapter.addFragment(new FragmentQuestionTY(),"Third year");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
