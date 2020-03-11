@@ -53,4 +53,10 @@
         android:label="@string/menu_events"
         tools:layout="@layout/activity_show_event" />
 
+    <fragment
+        android:id="@+id/log_out"
+        android:name="com.example.versionfour.ui.logout.Logout"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/activity_show_event" />
+
 </navigation>

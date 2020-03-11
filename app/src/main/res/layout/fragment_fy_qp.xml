@@ -6,12 +6,71 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-    <TextView
-        android:id="@+id/quiz_textview"
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center">
+
+       <ImageView
+        android:id="@+id/fyQTSImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/exampngfrag"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/fyQTSDownloadBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quiz fragment"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:text="Download">
+    </Button>
+   </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/fyQTSImageView1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/exampngfrag"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/fyQTSDownloadBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download">
+        </Button>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/fyQTSImageView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/exampngfrag"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/fyQTSDownloadBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download">
+        </Button>
+    </LinearLayout>
 </LinearLayout>

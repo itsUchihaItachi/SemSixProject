@@ -9,8 +9,8 @@
     <ImageView
         android:id="@+id/tyTTImageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/timetable"
+        android:layout_height="350dp"
+        android:src="@drawable/ttpngfrag"
         android:padding="10dp"
         android:layout_margin="10dp"/>
 
