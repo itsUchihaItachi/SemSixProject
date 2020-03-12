@@ -31,9 +31,8 @@ import java.util.Random;
 
 public class FragmentQuestionFY extends Fragment {
     View view;
-
-    ImageView imgView;
-    Button savebtn;
+    ImageView imgView,imgView1,imgView2;
+    Button savebtn,savebtn1,savebtn2;
 
     public FragmentQuestionFY() {
     }
@@ -43,16 +42,41 @@ public class FragmentQuestionFY extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fy_qp,container,false);
         imgView=view.findViewById(R.id.fyQTSImageView);
+        imgView1=view.findViewById(R.id.fyQTSImageView1);
+        imgView2=view.findViewById(R.id.fyQTSImageView2);
+
         savebtn=view.findViewById(R.id.fyQTSDownloadBtn);
+        savebtn1=view.findViewById(R.id.fyQTSDownloadBtn1);
+        savebtn2=view.findViewById(R.id.fyQTSDownloadBtn2);
 
         ActivityCompat.requestPermissions((Activity) getContext(),new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
         ActivityCompat.requestPermissions((Activity) getContext(),new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
+
         savebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getContext(), "File downloaded", Toast.LENGTH_SHORT).show();
                 imageSaveToMyPhone();
             }
         });
+
+        savebtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "File downloaded", Toast.LENGTH_SHORT).show();
+                imageSaveToMyPhone();
+
+            }
+        });
+
+        savebtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "File downloaded", Toast.LENGTH_SHORT).show();
+                imageSaveToMyPhone();
+            }
+        });
+
         return view;
     }
 
